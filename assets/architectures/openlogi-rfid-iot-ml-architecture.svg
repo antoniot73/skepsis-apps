@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="760" viewBox="0 0 1200 760">
+<rect width="1200" height="760" rx="28" fill="#ffffff"/>
+<rect x="30" y="30" width="1140" height="700" rx="26" fill="#f8fafc" stroke="#dbeafe" stroke-width="3"/>
+<text x="70" y="76" font-family="Inter, Arial, sans-serif" font-size="34" font-weight="800" fill="#0f172a">OpenLogi RFID IoT ML</text>
+<text x="70" y="110" font-family="Inter, Arial, sans-serif" font-size="20" font-weight="600" fill="#64748b">Arquitectura de integración logística, trazabilidad simulada e inteligencia predictiva</text>
+<rect x="120" y="120" width="960" height="54" rx="18" fill="#eff6ff" stroke="#93c5fd" stroke-width="2"/>
+<text x="148" y="155" font-family="Inter, Arial, sans-serif" font-size="22" font-weight="700" fill="#0f172a">Dataset DataCo SMART SUPPLY CHAIN</text>
+<line x1="600.0" y1="182" x2="600.0" y2="204" stroke="#2563eb" stroke-width="3" stroke-linecap="round"/>
+<path d="M592.0 196 L600.0 204 L608.0 196" fill="none" stroke="#2563eb" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="120" y="212" width="960" height="54" rx="18" fill="#eff6ff" stroke="#93c5fd" stroke-width="2"/>
+<text x="148" y="247" font-family="Inter, Arial, sans-serif" font-size="22" font-weight="700" fill="#0f172a">Python ETL: limpieza • normalización • anonimización • transformación</text>
+<line x1="600.0" y1="274" x2="600.0" y2="296" stroke="#2563eb" stroke-width="3" stroke-linecap="round"/>
+<path d="M592.0 288 L600.0 296 L608.0 288" fill="none" stroke="#2563eb" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="120" y="304" width="960" height="54" rx="18" fill="#eff6ff" stroke="#93c5fd" stroke-width="2"/>
+<text x="148" y="339" font-family="Inter, Arial, sans-serif" font-size="22" font-weight="700" fill="#0f172a">Artefactos analíticos: pedidos • productos • ventas • regiones • entregas</text>
+<line x1="600.0" y1="366" x2="600.0" y2="388" stroke="#2563eb" stroke-width="3" stroke-linecap="round"/>
+<path d="M592.0 380 L600.0 388 L608.0 380" fill="none" stroke="#2563eb" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="120" y="396" width="960" height="54" rx="18" fill="#eff6ff" stroke="#93c5fd" stroke-width="2"/>
+<text x="148" y="431" font-family="Inter, Arial, sans-serif" font-size="22" font-weight="700" fill="#0f172a">Capas simuladas: RFID • IoT • inventario WMS sintético</text>
+<line x1="600.0" y1="458" x2="600.0" y2="480" stroke="#2563eb" stroke-width="3" stroke-linecap="round"/>
+<path d="M592.0 472 L600.0 480 L608.0 472" fill="none" stroke="#2563eb" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="120" y="488" width="960" height="54" rx="18" fill="#eff6ff" stroke="#93c5fd" stroke-width="2"/>
+<text x="148" y="523" font-family="Inter, Arial, sans-serif" font-size="22" font-weight="700" fill="#0f172a">Modelo ML: probabilidad de entrega tardía</text>
+<line x1="600.0" y1="550" x2="600.0" y2="572" stroke="#2563eb" stroke-width="3" stroke-linecap="round"/>
+<path d="M592.0 564 L600.0 572 L608.0 564" fill="none" stroke="#2563eb" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="120" y="580" width="960" height="54" rx="18" fill="#eff6ff" stroke="#93c5fd" stroke-width="2"/>
+<text x="148" y="615" font-family="Inter, Arial, sans-serif" font-size="22" font-weight="700" fill="#0f172a">Dashboard Streamlit: KPIs • trazabilidad • alertas • inventario • riesgo</text>
+<line x1="600.0" y1="642" x2="600.0" y2="664" stroke="#2563eb" stroke-width="3" stroke-linecap="round"/>
+<path d="M592.0 656 L600.0 664 L608.0 656" fill="none" stroke="#2563eb" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="120" y="672" width="960" height="54" rx="18" fill="#eff6ff" stroke="#93c5fd" stroke-width="2"/>
+<text x="148" y="707" font-family="Inter, Arial, sans-serif" font-size="22" font-weight="700" fill="#0f172a">Streamlit Community Cloud + GitHub</text>
+<circle cx="1090" cy="82" r="18" fill="#2563eb"/>
+</svg>

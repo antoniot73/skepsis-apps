@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="760" viewBox="0 0 1200 760" role="img" aria-label="Proyecto sin imagen">
+  <rect width="1200" height="760" fill="#e2e8f0"/>
+  <rect x="170" y="170" width="860" height="420" rx="36" fill="#ffffff"/>
+  <text x="600" y="350" text-anchor="middle" font-size="48" font-family="Arial, sans-serif" font-weight="800" fill="#1d4ed8">Arquitectura del proyecto</text>
+  <text x="600" y="405" text-anchor="middle" font-size="24" font-family="Arial, sans-serif" fill="#64748b">Reemplaza esta imagen en assets/architectures</text>
+</svg>
