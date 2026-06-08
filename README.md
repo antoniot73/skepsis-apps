@@ -23,3 +23,9 @@ Abrir:
 - RetailOps BI ML
 
 Para agregar nuevos casos, editar `projects.json` manteniendo la misma estructura.
+
+
+## Diseños visuales
+
+Cada proyecto puede incluir el campo `designImage` en `projects.json` para abrir una imagen de diseño desde el botón **Diseño** sin reemplazar la arquitectura tecnológica.
+

@@ -414,6 +414,34 @@ function appendExternalLink(container, label, url, isPrimary = false) {
 }
 
 /**
+ * Agrega un enlace interno hacia un recurso del sitio, como una imagen de diseño.
+ *
+ * @param {HTMLElement} container Contenedor destino.
+ * @param {string} label Texto visible del enlace.
+ * @param {string | undefined | null} path Ruta relativa del recurso.
+ * @returns {void}
+ */
+function appendAssetLink(container, label, path) {
+  if (typeof path !== "string" || path.trim() === "") {
+    return;
+  }
+
+  const isUnsafePath = path.startsWith("javascript:") || path.startsWith("data:");
+  if (isUnsafePath) {
+    logEvent("WARN", `Ruta interna inválida omitida: ${path}`);
+    return;
+  }
+
+  const link = document.createElement("a");
+  link.className = "action-link";
+  link.href = path;
+  link.target = "_blank";
+  link.rel = "noopener noreferrer";
+  link.textContent = label;
+  container.appendChild(link);
+}
+
+/**
  * Construye tarjeta visual para un proyecto.
  *
  * @param {object} project Proyecto individual.
@@ -459,6 +487,7 @@ function buildProjectCard(project) {
   appendExternalLink(actions, "GitHub", project.githubUrl);
   appendExternalLink(actions, "Dataset", project.datasetUrl);
   appendExternalLink(actions, "Artículo", project.linkedinUrl);
+  appendAssetLink(actions, "Diseño", project.designImage);
 
   const detailsButton = document.createElement("button");
   detailsButton.type = "button";
@@ -607,6 +636,7 @@ function openProjectDialog(project) {
   appendExternalLink(linkList, "Repositorio GitHub", project.githubUrl);
   appendExternalLink(linkList, "Dataset", project.datasetUrl);
   appendExternalLink(linkList, "Artículo LinkedIn", project.linkedinUrl);
+  appendAssetLink(linkList, "Diseño de la solución", project.designImage);
 
   if (linkList.children.length > 0) {
     body.appendChild(buildDialogSection("Evidencia pública", linkList));

@@ -38,7 +38,8 @@
     "linkedinUrl": "https://www.linkedin.com/feed/update/urn:li:activity:7469426033159553024/",
     "date": "2026-06-08",
     "outcome": "De datos logísticos dispersos a una demo operativa con KPIs, trazabilidad, inventario sintético, monitoreo simulado y estimación de riesgo de entrega tardía.",
-    "articleTitle": "OpenLogi RFID IoT ML: de datos logísticos a inteligencia operativa"
+    "articleTitle": "OpenLogi RFID IoT ML: de datos logísticos a inteligencia operativa",
+    "designImage": "assets/designs/OpenLogi_RFDI_IoT_ML.png"
   },
   {
     "id": "retailops-bi-ml",
@@ -87,6 +88,7 @@
     "linkedinUrl": "https://www.linkedin.com/feed/update/urn:li:activity:7469264507815661568/",
     "date": "2026-06-08",
     "outcome": "De datos crudos de e-commerce a una arquitectura BI/ML con ETL, PostgreSQL/Neon, vistas analíticas, dashboard, calidad de datos y scoring predictivo de entregas tardías.",
-    "articleTitle": "RetailOps BI ML: de datos crudos a inteligencia comercial predictiva"
+    "articleTitle": "RetailOps BI ML: de datos crudos a inteligencia comercial predictiva",
+    "designImage": "assets/designs/retailops-bi-olist_ML.png"
   }
 ]
