@@ -5,7 +5,6 @@ const REQUIRED_FIELDS = ["id", "title", "category", "summary", "description", "p
 const state = {
   projects: [],
   activeCategory: "Todos",
-  activeStatus: "Todos",
   searchTerm: "",
   sortMode: "date-desc"
 };
@@ -15,7 +14,6 @@ const elements = {
   navLinks: document.querySelector("#navLinks"),
   grid: document.querySelector("#projectGrid"),
   categoryFilters: document.querySelector("#categoryFilters"),
-  statusFilters: document.querySelector("#statusFilters"),
   searchInput: document.querySelector("#searchInput"),
   sortSelect: document.querySelector("#sortSelect"),
   statusMessage: document.querySelector("#statusMessage"),
@@ -249,22 +247,15 @@ function renderFilterButtons(container, values, activeValue, onSelect) {
 }
 
 /**
- * Renderiza filtros de categoría y estado.
+ * Renderiza filtros de categoría.
  *
  * @returns {void}
  */
 function renderFilters() {
   const categories = getUniqueValues(state.projects, "category");
-  const statuses = getUniqueValues(state.projects, "status");
 
   renderFilterButtons(elements.categoryFilters, categories, state.activeCategory, (value) => {
     state.activeCategory = value;
-    renderFilters();
-    renderProjects();
-  });
-
-  renderFilterButtons(elements.statusFilters, statuses, state.activeStatus, (value) => {
-    state.activeStatus = value;
     renderFilters();
     renderProjects();
   });
@@ -322,12 +313,10 @@ function renderMetrics() {
  */
 function matchesFilters(project) {
   const categoryMatches = state.activeCategory === "Todos" || project.category === state.activeCategory;
-  const statusMatches = state.activeStatus === "Todos" || project.status === state.activeStatus;
 
   const searchable = [
     project.title,
     project.category,
-    project.status,
     project.summary,
     project.description,
     project.purpose,
@@ -338,7 +327,7 @@ function matchesFilters(project) {
 
   const searchMatches = state.searchTerm === "" || normalizeText(searchable).includes(normalizeText(state.searchTerm));
 
-  return categoryMatches && statusMatches && searchMatches;
+  return categoryMatches && searchMatches;
 }
 
 /**
@@ -604,7 +593,6 @@ function buildProjectCard(project) {
   const meta = document.createElement("div");
   meta.className = "card-meta";
   meta.appendChild(createTextElement("span", project.category || "Proyecto", "badge"));
-  meta.appendChild(createTextElement("span", project.status || "Documentado", "status"));
   body.appendChild(meta);
 
   body.appendChild(createTextElement("h3", project.title));

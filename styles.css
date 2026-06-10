@@ -1158,3 +1158,15 @@ body.image-zoom-open {
     transform: none;
   }
 }
+
+
+/* ============================================================
+   v15: eliminación del filtro visual "Estado"
+   ============================================================ */
+.filters-layout-single {
+  grid-template-columns: 1fr;
+}
+
+.filters-layout-single .filter-panel {
+  width: 100%;
+}

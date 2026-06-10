@@ -6,9 +6,9 @@ El sitio está diseñado para desplegarse en **GitHub Pages** sin backend. Los p
 
 ---
 
-## Estado del proyecto
+## Información del proyecto
 
-- **Versión integral:** v13
+- **Versión integral:** v15
 - **Sitio objetivo:** `https://antoniot73.github.io/skepsis-apps/`
 - **Repositorio:** `https://github.com/antoniot73/skepsis-apps`
 - **Tipo de proyecto:** landing estática + portafolio dinámico
@@ -144,7 +144,7 @@ Controla la lógica del sitio:
 
 - Carga dinámica de `projects.json`.
 - Renderizado de tarjetas de portafolio.
-- Filtros por categoría y estado.
+- Filtros por categoría.
 - Búsqueda de proyectos.
 - Ordenamiento.
 - Métricas dinámicas.
@@ -165,15 +165,15 @@ Script auxiliar para validar que `projects.json` sea un JSON correcto y que los 
 
 ## Portafolios incluidos
 
-| Proyecto | Categoría | Estado | Enlaces |
-|---|---|---|---|
-| OpenLogi RFID IoT ML | Logística / IoT / Machine Learning | Publicado | [App](https://openlogi-rfid-iot-demo-ml.streamlit.app/), [GitHub](https://github.com/antoniot73/openlogi-rfid-iot-demo-ml), [Dataset](https://www.kaggle.com/datasets/shashwatwork/dataco-smart-supply-chain-for-big-data-analysis?resource=download), [Artículo](https://www.linkedin.com/posts/antonio-toro-vzla_datascience-machinelearning-logistics-activity-7469426033159553024-l7al), [Diseño](assets/designs/OpenLogi_RFDI_IoT_ML.png) |
-| RetailOps BI ML | Retail / BI / Machine Learning | Publicado | [App](https://retailops-bi-ml.streamlit.app/), [GitHub](https://github.com/antoniot73/retailops-bi-ml), [Dataset](https://www.kaggle.com/datasets/olistbr/brazilian-ecommerce?phase=FinishSSORegistration), [Artículo](https://www.linkedin.com/posts/antonio-toro-vzla_dataanalytics-businessintelligence-machinelearning-activity-7469264507815661568-fIBA), [Diseño](assets/designs/retailops-bi-olist_ML.png) |
-| OptiSCADA ML Complete | Industria 4.0 / IoT / Machine Learning | Publicado | [App](https://optiscada-ml.streamlit.app/), [GitHub](https://github.com/antoniot73/OptiSCADA_ML_Complete), [Artículo](https://www.linkedin.com/posts/antonio-toro-vzla_industria40-machinelearning-iot-activity-7466738871968538624-ApkT), [Diseño](assets/designs/OptiSCADA_ML_UPDATED.PNG) |
-| Ames Housing Price Predictor | Inmobiliario / Machine Learning / Streamlit | Publicado | [App](https://ames-housing-predictor.streamlit.app/), [GitHub](https://github.com/antoniot73/ames_housing_streamlit_demo), [Dataset](https://www.kaggle.com/competitions/house-prices-advanced-regression-techniques?utm_source=chatgpt.com), [Artículo](https://www.linkedin.com/posts/antonio-toro-vzla_machinelearning-datascience-artificialintelligence-activity-7466589186507218944-h92F), [Diseño](assets/designs/Arquitectura Ames Housing Streamlit.PNG) |
-| Ames Housing Price Predictor (Python + R Cloud Edition) | Python + R / FastAPI / Machine Learning | Publicado | [App](https://ames-python-web-app.onrender.com/), [GitHub](https://github.com/antoniot73/ames-housing-price-predictor), [Dataset](https://www.kaggle.com/competitions/house-prices-advanced-regression-techniques), [Artículo](https://www.linkedin.com/posts/antonio-toro-vzla_machinelearning-datascience-python-activity-7470498339340591104-lisB), [Diseño](assets/designs/Arquitectura Ames Housing Render.PNG) |
-| StockPredict MVP | Inventarios / Demanda / Machine Learning | Publicado | [App](https://stockpredict-mvp-ml.streamlit.app/), [GitHub](https://github.com/antoniot73/stockpredict_mvp_ml), [Artículo](https://www.linkedin.com/posts/antonio-toro-vzla_artificialintelligence-machinelearning-datascience-activity-7466534727055966208-Uq2i), [Diseño](assets/designs/Arquitectura Stock Predict MVP ML.PNG) |
-| Industrial AI Prototype | Industria 4.0 / FastAPI / Streamlit / ML | Publicado | [App](https://industrial-ai-dashboard-qqdn.onrender.com/), [GitHub](https://github.com/antoniot73/industrial-ai-prototype), [Artículo](https://www.linkedin.com/posts/antonio-toro-vzla_artificialintelligence-machinelearning-python-activity-7465641588292038656-CbZP), [Diseño](assets/designs/Industrial AI Prototype.PNG) |
+| Proyecto | Categoría | Enlaces |
+|---|---|---|
+| OpenLogi RFID IoT ML | Logística / IoT / Machine Learning | [App](https://openlogi-rfid-iot-demo-ml.streamlit.app/), [GitHub](https://github.com/antoniot73/openlogi-rfid-iot-demo-ml), [Dataset](https://www.kaggle.com/datasets/shashwatwork/dataco-smart-supply-chain-for-big-data-analysis?resource=download), [Artículo](https://www.linkedin.com/posts/antonio-toro-vzla_datascience-machinelearning-logistics-activity-7469426033159553024-l7al), [Diseño](assets/designs/OpenLogi_RFDI_IoT_ML.png) |
+| RetailOps BI ML | Retail / BI / Machine Learning | [App](https://retailops-bi-ml.streamlit.app/), [GitHub](https://github.com/antoniot73/retailops-bi-ml), [Dataset](https://www.kaggle.com/datasets/olistbr/brazilian-ecommerce?phase=FinishSSORegistration), [Artículo](https://www.linkedin.com/posts/antonio-toro-vzla_dataanalytics-businessintelligence-machinelearning-activity-7469264507815661568-fIBA), [Diseño](assets/designs/retailops-bi-olist_ML.png) |
+| OptiSCADA ML Complete | Industria 4.0 / IoT / Machine Learning | [App](https://optiscada-ml.streamlit.app/), [GitHub](https://github.com/antoniot73/OptiSCADA_ML_Complete), [Artículo](https://www.linkedin.com/posts/antonio-toro-vzla_industria40-machinelearning-iot-activity-7466738871968538624-ApkT), [Diseño](assets/designs/OptiSCADA_ML_UPDATED.PNG) |
+| Ames Housing Price Predictor | Inmobiliario / Machine Learning / Streamlit | [App](https://ames-housing-predictor.streamlit.app/), [GitHub](https://github.com/antoniot73/ames_housing_streamlit_demo), [Dataset](https://www.kaggle.com/competitions/house-prices-advanced-regression-techniques?utm_source=chatgpt.com), [Artículo](https://www.linkedin.com/posts/antonio-toro-vzla_machinelearning-datascience-artificialintelligence-activity-7466589186507218944-h92F), [Diseño](assets/designs/Arquitectura Ames Housing Streamlit.PNG) |
+| Ames Housing Price Predictor (Python + R Cloud Edition) | Python + R / FastAPI / Machine Learning | [App](https://ames-python-web-app.onrender.com/), [GitHub](https://github.com/antoniot73/ames-housing-price-predictor), [Dataset](https://www.kaggle.com/competitions/house-prices-advanced-regression-techniques), [Artículo](https://www.linkedin.com/posts/antonio-toro-vzla_machinelearning-datascience-python-activity-7470498339340591104-lisB), [Diseño](assets/designs/Arquitectura Ames Housing Render.PNG) |
+| StockPredict MVP | Inventarios / Demanda / Machine Learning | [App](https://stockpredict-mvp-ml.streamlit.app/), [GitHub](https://github.com/antoniot73/stockpredict_mvp_ml), [Artículo](https://www.linkedin.com/posts/antonio-toro-vzla_artificialintelligence-machinelearning-datascience-activity-7466534727055966208-Uq2i), [Diseño](assets/designs/Arquitectura Stock Predict MVP ML.PNG) |
+| Industrial AI Prototype | Industria 4.0 / FastAPI / Streamlit / ML | [App](https://industrial-ai-dashboard-qqdn.onrender.com/), [GitHub](https://github.com/antoniot73/industrial-ai-prototype), [Artículo](https://www.linkedin.com/posts/antonio-toro-vzla_artificialintelligence-machinelearning-python-activity-7465641588292038656-CbZP), [Diseño](assets/designs/Industrial AI Prototype.PNG) |
 
 ---
 
@@ -232,7 +232,6 @@ Cada proyecto puede usar los siguientes campos:
   "id": "identificador-unico",
   "title": "Nombre del proyecto",
   "category": "Categoría técnica",
-  "status": "Publicado",
   "summary": "Resumen corto para tarjeta",
   "description": "Descripción extendida para modal",
   "purpose": "Propósito del proyecto",
@@ -267,7 +266,6 @@ Cada proyecto puede usar los siguientes campos:
 - `id`
 - `title`
 - `category`
-- `status`
 - `summary`
 - `description`
 - `purpose`

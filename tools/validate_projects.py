@@ -30,7 +30,6 @@ REQUIRED_STRING_FIELDS: list[str] = [
     "id",
     "title",
     "category",
-    "status",
     "summary",
     "description",
     "purpose",
@@ -222,7 +221,7 @@ def print_report(projects: list[dict[str, Any]]) -> None:
     print("-" * 60)
 
     for index, project in enumerate(projects, start=1):
-        print(f"{index}. {project['title']} | {project['category']} | {project['status']}")
+        print(f"{index}. {project['title']} | {project['category']}")
 
     print("=" * 60)
     print("Resultado: projects.json es válido.\n")
