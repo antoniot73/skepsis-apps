@@ -441,6 +441,133 @@ function appendAssetLink(container, label, path) {
   container.appendChild(link);
 }
 
+
+/**
+ * Agrega enlaces adicionales declarados en el proyecto.
+ *
+ * @param {HTMLElement} container Contenedor destino.
+ * @param {Array<object> | undefined | null} links Lista de enlaces {label, url}.
+ * @returns {void}
+ */
+function appendExtraLinks(container, links) {
+  if (!Array.isArray(links)) {
+    return;
+  }
+
+  for (const linkItem of links) {
+    if (typeof linkItem !== "object" || linkItem === null) {
+      continue;
+    }
+
+    const label = typeof linkItem.label === "string" && linkItem.label.trim() !== ""
+      ? linkItem.label.trim()
+      : "Enlace";
+
+    appendExternalLink(container, label, linkItem.url);
+  }
+}
+
+/**
+ * Abre una vista ampliada de una imagen interna del portafolio.
+ *
+ * @param {string | undefined | null} source Ruta relativa de la imagen.
+ * @param {string} title Título descriptivo de la imagen.
+ * @returns {void}
+ */
+function openImageZoom(source, title) {
+  if (typeof source !== "string" || source.trim() === "") {
+    return;
+  }
+
+  const isUnsafePath = source.startsWith("javascript:") || source.startsWith("data:");
+  if (isUnsafePath) {
+    logEvent("WARN", `Ruta de imagen inválida omitida: ${source}`);
+    return;
+  }
+
+  const previousOverlay = document.querySelector(".image-zoom-overlay");
+  if (previousOverlay) {
+    previousOverlay.remove();
+  }
+
+  const overlay = document.createElement("div");
+  overlay.className = "image-zoom-overlay";
+  overlay.setAttribute("role", "dialog");
+  overlay.setAttribute("aria-modal", "true");
+  overlay.setAttribute("aria-label", `Vista ampliada: ${title}`);
+
+  const panel = document.createElement("div");
+  panel.className = "image-zoom-panel";
+
+  const header = document.createElement("div");
+  header.className = "image-zoom-header";
+  header.appendChild(createTextElement("h3", title));
+
+  const closeButton = document.createElement("button");
+  closeButton.type = "button";
+  closeButton.className = "image-zoom-close";
+  closeButton.setAttribute("aria-label", "Cerrar zoom");
+  closeButton.textContent = "×";
+
+  const image = document.createElement("img");
+  image.className = "image-zoom-img";
+  image.src = source;
+  image.alt = title;
+
+  header.appendChild(closeButton);
+  panel.appendChild(header);
+  panel.appendChild(image);
+  overlay.appendChild(panel);
+  document.body.appendChild(overlay);
+  document.body.classList.add("image-zoom-open");
+
+  const closeZoom = () => {
+    overlay.remove();
+    document.body.classList.remove("image-zoom-open");
+  };
+
+  closeButton.addEventListener("click", closeZoom);
+  overlay.addEventListener("click", (event) => {
+    if (event.target === overlay) {
+      closeZoom();
+    }
+  });
+
+  document.addEventListener("keydown", function handleZoomEscape(event) {
+    if (event.key === "Escape" && document.body.contains(overlay)) {
+      closeZoom();
+      document.removeEventListener("keydown", handleZoomEscape);
+    }
+  });
+}
+
+/**
+ * Agrega comportamiento de zoom a una imagen o contenedor visual.
+ *
+ * @param {HTMLElement} target Elemento clicable.
+ * @param {string | undefined | null} source Ruta relativa de la imagen.
+ * @param {string} title Título descriptivo.
+ * @returns {void}
+ */
+function enableImageZoom(target, source, title) {
+  if (typeof source !== "string" || source.trim() === "") {
+    return;
+  }
+
+  target.classList.add("zoomable-image");
+  target.setAttribute("role", "button");
+  target.setAttribute("tabindex", "0");
+  target.setAttribute("aria-label", `Ampliar ${title}`);
+
+  target.addEventListener("click", () => openImageZoom(source, title));
+  target.addEventListener("keydown", (event) => {
+    if (event.key === "Enter" || event.key === " ") {
+      event.preventDefault();
+      openImageZoom(source, title);
+    }
+  });
+}
+
 /**
  * Construye tarjeta visual para un proyecto.
  *
@@ -463,7 +590,12 @@ function buildProjectCard(project) {
     image.src = "assets/images/placeholder-project.svg";
   };
 
+  const zoomHint = document.createElement("span");
+  zoomHint.className = "zoom-hint";
+  zoomHint.textContent = "Click para ampliar";
   imageWrap.appendChild(image);
+  imageWrap.appendChild(zoomHint);
+  enableImageZoom(imageWrap, image.src, `Arquitectura tecnológica de ${project.title}`);
   card.appendChild(imageWrap);
 
   const body = document.createElement("div");
@@ -484,6 +616,7 @@ function buildProjectCard(project) {
   actions.className = "card-actions";
 
   appendExternalLink(actions, "App", project.appUrl, true);
+  appendExtraLinks(actions, project.extraLinks);
   appendExternalLink(actions, "GitHub", project.githubUrl);
   appendExternalLink(actions, "Dataset", project.datasetUrl);
   appendExternalLink(actions, "Artículo", project.linkedinUrl);
@@ -615,6 +748,7 @@ function openProjectDialog(project) {
     image.src = "assets/images/placeholder-project.svg";
   };
 
+  enableImageZoom(image, image.src, `Arquitectura tecnológica de ${project.title}`);
   architectureFigure.appendChild(image);
   body.appendChild(architectureFigure);
 
@@ -633,6 +767,7 @@ function openProjectDialog(project) {
   const linkList = document.createElement("div");
   linkList.className = "link-list";
   appendExternalLink(linkList, "Abrir app", project.appUrl, true);
+  appendExtraLinks(linkList, project.extraLinks);
   appendExternalLink(linkList, "Repositorio GitHub", project.githubUrl);
   appendExternalLink(linkList, "Dataset", project.datasetUrl);
   appendExternalLink(linkList, "Artículo LinkedIn", project.linkedinUrl);
